@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "generate-embeddings": "node scripts/generateEmbeddings.js"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.2",
+    "axios": "^1.15.2",
+    "dotenv": "^16.3.1",
+    "openai": "^4.20.1"
+  }
+}
