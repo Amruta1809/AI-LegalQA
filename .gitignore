@@ -2,6 +2,8 @@ node_modules/
 backend/node_modules/
 frontend/node_modules/
 frontend/dist/
+.venv/
+python_backend/.venv/
 
 .env
 backend/.env
@@ -14,3 +16,5 @@ backend/.env
 .DS_Store
 __pycache__/
 *.pyc
+.pytest_cache/
+.mypy_cache/

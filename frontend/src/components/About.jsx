@@ -47,7 +47,7 @@ function About() {
         <div className="bg-gray-800/50 border border-gray-700/50 rounded-xl p-5 mb-4">
           <h2 className="text-sm font-semibold text-white flex items-center gap-2 mb-3">🛠️ Tech Stack</h2>
           <div className="flex flex-wrap gap-2">
-            {['React', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'Supabase', 'pgvector', 'Hugging Face', 'OpenRouter', 'GPT-4o-mini', 'Tesseract.js', 'Web Speech API'].map(tech => (
+            {['React', 'Vite', 'Tailwind CSS', 'Python', 'FastAPI', 'Neon PostgreSQL', 'pgvector', 'Hugging Face', 'OpenRouter', 'GPT-4o-mini', 'Tesseract.js', 'Web Speech API'].map(tech => (
               <span key={tech} className="px-3 py-1 bg-gray-700/50 border border-gray-600/50 rounded-full text-xs text-gray-300">{tech}</span>
             ))}
           </div>
@@ -60,7 +60,7 @@ function About() {
             {[
               { step: '1', text: 'Your question is converted into a vector embedding using Hugging Face AI' },
               { step: '2', text: 'The embedding is matched against 300+ Indian law sections using cosine similarity' },
-              { step: '3', text: 'Top matching laws are retrieved from the Supabase database' },
+              { step: '3', text: 'Top matching laws are retrieved from the Neon PostgreSQL database' },
               { step: '4', text: 'GPT-4o-mini generates a clear answer grounded in the retrieved law text' },
               { step: '5', text: 'Citations with exact act and section numbers are displayed' },
             ].map(s => (
