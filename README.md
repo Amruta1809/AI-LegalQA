@@ -13,7 +13,7 @@ A full-stack AI application that allows users to ask legal questions about India
 ## Tech Stack
 
 - **Frontend**: React + Vite, Tailwind CSS
-- **Backend**: Node.js + Express
+- **Backend**: Node.js + Express, Python + FastAPI
 - **Database**: Neon PostgreSQL with pgvector
 - **AI**: Hugging Face for embeddings, OpenRouter for completions
 
@@ -44,6 +44,22 @@ A full-stack AI application that allows users to ask legal questions about India
    ```
    Fill in your API keys and Neon connection string. Hugging Face API key is optional but recommended.
 
+### Python Backend Setup
+
+1. Navigate to the Python backend:
+   ```bash
+   cd python_backend
+   ```
+
+2. Create a virtual environment and install dependencies:
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate
+   pip install -r requirements.txt
+   ```
+
+3. Reuse the same root `.env` values for `OPENROUTER_API_KEY`, `HUGGINGFACE_API_KEY`, and `DATABASE_URL`
+
 ### Frontend Setup
 
 1. Navigate to frontend directory:
@@ -70,10 +86,15 @@ A full-stack AI application that allows users to ask legal questions about India
 
 ### Running the Application
 
-1. Start the backend:
+1. Start either backend:
    ```bash
    cd backend
    npm run dev
+   ```
+   Or:
+   ```bash
+   cd python_backend
+   uvicorn main:app --reload --port 5000
    ```
 
 2. Start the frontend:
