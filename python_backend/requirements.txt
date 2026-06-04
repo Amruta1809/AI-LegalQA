@@ -3,3 +3,4 @@ uvicorn==0.34.2
 requests==2.32.3
 psycopg[binary]==3.2.9
 python-dotenv==1.0.1
+streamlit==1.45.1
