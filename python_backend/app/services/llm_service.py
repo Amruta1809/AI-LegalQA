@@ -15,6 +15,13 @@ from .search_service import search_laws
 OPENROUTER_CHAT_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 
+def ensure_openrouter_api_key() -> None:
+    if not settings.openrouter_api_key:
+        raise ValueError(
+            "OPENROUTER_API_KEY is not configured. Add it to your local .env or Streamlit Cloud secrets."
+        )
+
+
 def calculate_confidence(relevant_laws: list[dict]) -> tuple[int, str]:
     if not relevant_laws:
         return 32, "Low"
@@ -132,6 +139,7 @@ def ensure_disclaimer(answer: str) -> str:
 
 
 def ask_question(question: str) -> dict:
+    ensure_openrouter_api_key()
     intent_category = classify_intent(question)
 
     if is_greeting(question):
