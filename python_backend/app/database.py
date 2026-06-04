@@ -7,13 +7,13 @@ from urllib.parse import parse_qs, unquote, urlparse
 try:
     import psycopg
     from psycopg.rows import dict_row
-except ModuleNotFoundError:
+except ImportError:
     psycopg = None
     dict_row = None
 
 try:
     import pg8000.dbapi as pg8000
-except ModuleNotFoundError:
+except ImportError:
     pg8000 = None
 
 from .config import settings
